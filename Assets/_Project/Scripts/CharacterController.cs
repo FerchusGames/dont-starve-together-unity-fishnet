@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FishNet;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine.Serialization;
@@ -39,7 +40,7 @@ public class CharacterController : NetworkBehaviour
     public override void OnStartNetwork()
     {
         base.OnStartNetwork();
-        if (Owner.IsLocalClient)
+        if (base.Owner.IsLocalClient)
         {
             _renderer.material.color = Color.green;
             name += " - (Local Player)";
@@ -49,7 +50,7 @@ public class CharacterController : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner)
+        if (!base.IsOwner)
             return;
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -79,7 +80,7 @@ public class CharacterController : NetworkBehaviour
         // Update any SyncVar variable before calling 'Spawn'
             
         // Syncs this object's spawning
-        FishNet.InstanceFinder.ServerManager.Spawn(newProyectile); // Only works if the game object has a NetworkObject
+        InstanceFinder.ServerManager.Spawn(newProyectile); // Only works if the game object has a NetworkObject
     }
 
     // [ServerRpc(RequireOwnership = false)] // To execute a function even if the client doesn't not own it

@@ -22,7 +22,7 @@ public class PlayerProyectile : NetworkBehaviour
     {
         // Despawn only works with 'NetworkObject'
         
-        Despawn(gameObject);
+        base.Despawn(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +30,7 @@ public class PlayerProyectile : NetworkBehaviour
         if (other.CompareTag("Player") && IsServer)
         {
             other.GetComponent<CharacterController>().TakeDamage(_damageAmount);
-            Despawn(gameObject);
+            base.Despawn(gameObject);
         }
     }
 }
