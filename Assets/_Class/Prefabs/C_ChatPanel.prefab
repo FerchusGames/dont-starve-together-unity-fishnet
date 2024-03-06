@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3716203202901257855}
   - component: {fileID: 8865840513524231251}
   m_Layer: 5
-  m_Name: ChatPanel
+  m_Name: C_ChatPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

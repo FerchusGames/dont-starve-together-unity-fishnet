@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7951525889778397327}
   - component: {fileID: 1882229993086292776}
   m_Layer: 5
-  m_Name: TimePanel
+  m_Name: C_TimePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,6 +232,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 1882229993086292776}
   _counterText: {fileID: 1184673179782393255}
   _startButton: {fileID: 9166613036434483208}
+  _timerLength: 10
 --- !u!114 &1882229993086292776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,11 +261,11 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 0
+  <PrefabId>k__BackingField: 11
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 584410112
   <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 14176253894492773066
+  <AssetPathHash>k__BackingField: 3007399917120777945
 --- !u!1 &7959840500499896778
 GameObject:
   m_ObjectHideFlags: 0

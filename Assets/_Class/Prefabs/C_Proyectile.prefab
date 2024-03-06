@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4790706127567808724}
   - component: {fileID: 5580728792453005057}
   m_Layer: 0
-  m_Name: Proyectile
+  m_Name: C_Proyectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,11 +165,11 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 9
+  <PrefabId>k__BackingField: 10
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 13899773132778113830
+  <AssetPathHash>k__BackingField: 17930164495468894373
 --- !u!114 &4790706127567808724
 MonoBehaviour:
   m_ObjectHideFlags: 0
