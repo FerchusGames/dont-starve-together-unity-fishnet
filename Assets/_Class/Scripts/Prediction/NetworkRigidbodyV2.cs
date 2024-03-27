@@ -45,21 +45,21 @@ public class NetworkRigidbodyV2 : NetworkBehaviour
         int steps = (int)(passedTime / stepInterval); // How many physics ticks we're going to calculate
         float velocity = _force * Time.fixedDeltaTime;
 
-        Vector2 predictedPosition = _rigidbody2D.position;
-        float appliedGravity = 0f;
-        
-        for (int i = 0; i < steps; i++)
-        {
-            // Origin + Direction * Velocity * Frame Duration
-            predictedPosition = _rigidbody2D.position + _direction * velocity * i * stepInterval;
-            appliedGravity = Physics2D.gravity.y / 2f * Mathf.Pow(i * stepInterval, 2); // Parabolic movement formula
-            predictedPosition.y += appliedGravity;
-        }
-
-        _rigidbody2D.position = predictedPosition;
-        Vector2 newVelocity = _direction * _force;
-        newVelocity.y -= appliedGravity;
-        _rigidbody2D.velocity = newVelocity;
+        // Vector2 predictedPosition = _rigidbody2D.position;
+        // float appliedGravity = 0f;
+        //
+        // for (int i = 0; i < steps; i++)
+        // {
+        //     // Origin + Direction * Velocity * Frame Duration
+        //     predictedPosition = _rigidbody2D.position + _direction * velocity * i * stepInterval;
+        //     appliedGravity = Physics2D.gravity.y / 2f * Mathf.Pow(i * stepInterval, 2); // Parabolic movement formula
+        //     predictedPosition.y += appliedGravity;
+        // }
+        //
+        // _rigidbody2D.position = predictedPosition;
+        // Vector2 newVelocity = _direction * _force;
+        // newVelocity.y -= appliedGravity;
+        // _rigidbody2D.velocity = newVelocity;
     }
 
     [ObserversRpc (RunLocally = true)]
